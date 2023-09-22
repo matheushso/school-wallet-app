@@ -1,0 +1,31 @@
+Tabela de Alunos:
+
+Esta tabela pode conter informações sobre os alunos, como nome, matrícula, turma, endereço de e-mail, etc.
+Tabela de Contas dos Alunos:
+
+Cada aluno terá uma conta associada a esta tabela, que rastreará o saldo atual.
+Tabela de Transações:
+
+Esta tabela registrará todas as transações financeiras relacionadas aos alunos, incluindo débitos (compras na cantina) e créditos (recargas).
+Tabela de Itens da Cantina:
+
+Esta tabela pode conter informações sobre os itens disponíveis na cantina, como nome do item, preço, descrição, etc.
+Tabela de Compras dos Alunos:
+
+Registre as compras individuais dos alunos, associando-as aos itens da cantina e ao valor gasto.
+Tabela de Recargas:
+
+Registre todas as recargas de saldo nas contas dos alunos.
+Tabela de Usuários (para Administração):
+
+Se houver usuários administrativos que precisam acessar e gerenciar o sistema, esta tabela poderá ser usada para autenticação e autorização.
+Tabela de Notificações:
+
+Esta tabela pode ser usada para armazenar informações sobre notificações enviadas aos pais ou responsáveis sobre o saldo dos alunos.
+Tabela de Histórico de Acessos:
+
+Mantenha um registro de todas as atividades de acesso ao sistema, incluindo datas e usuários.
+Tabela de Configurações do Sistema:
+
+Armazene configurações gerais do sistema, como limites de saldo mínimo, endereço de e-mail de suporte, etc.
+Lembre-se de que a estrutura do banco de dados pode ser mais complexa, dependendo das regras de negócios específicas e dos recursos adicionais que deseja oferecer. Além disso, você também deve considerar a normalização do banco de dados para evitar redundância de dados e garantir a integridade dos dados.
