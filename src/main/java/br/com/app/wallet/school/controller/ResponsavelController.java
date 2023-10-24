@@ -2,9 +2,9 @@ package br.com.app.wallet.school.controller;
 
 
 import br.com.app.wallet.school.domain.Responsavel;
+import br.com.app.wallet.school.services.ResponsavelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import br.com.app.wallet.school.repository.ResponsavelRepository;
 
 import java.util.List;
 
@@ -13,31 +13,36 @@ import java.util.List;
 public class ResponsavelController {
 
     @Autowired
-    public ResponsavelRepository repository;
+    public ResponsavelService service;
 
     @GetMapping("/api")
     public List<Responsavel> findAll(){
-        return repository.findAll();
+        return service.findAll();
     }
 
     @PostMapping("/api")
     public Responsavel salvarResponsavel(@RequestBody Responsavel responsavel){
-      return  repository.save(responsavel);
+      return  service.salvarResponsavel(responsavel);
     }
 
     @PutMapping("/api")
     public Responsavel editarResponsavel(@RequestBody Responsavel responsavel){
-        return salvarResponsavel(responsavel);
+        return service.salvarResponsavel(responsavel);
     }
 
     @DeleteMapping("/api/{id}")
     public void excluirResponsavel(@PathVariable Long id){
-        Responsavel responsavelRecuperado = buscarUm(id);
-        repository.delete(responsavelRecuperado);
+        service.excluirResponsavel(id);
     }
 
     @GetMapping("/api/{id}")
-    public Responsavel buscarUm(@PathVariable Long id){
-        return repository.findById(id).orElse(null);
+    public Responsavel buscarUm(@PathVariable Long id) {
+        return service.buscarUm(id);
     }
+
+    @GetMapping("/api/filtrarNome")
+    public List<Responsavel> filtrarNome(@RequestParam String termo){
+        return service.filtrarNome(termo);
+    }
+
 }

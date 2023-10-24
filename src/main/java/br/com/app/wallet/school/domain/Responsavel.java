@@ -14,6 +14,8 @@ public class Responsavel {
     private String nome;
     @ManyToMany
     private List<Dependente> dependenteList;
+    @Column(name = "grau_parentesco")
+    private String grauParentesco;
 
     public void setId(Long id) {
         this.id = id;
@@ -29,5 +31,21 @@ public class Responsavel {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public List<Dependente> getDependenteList() {
+        return dependenteList;
+    }
+
+    public void setDependenteList(List<Dependente> dependenteList) {
+        this.dependenteList = dependenteList;
+    }
+
+    public String getGrauParentesco() {
+        return grauParentesco;
+    }
+
+    public void setGrauParentesco(String grauParentesco) {
+        this.grauParentesco = grauParentesco;
     }
 }

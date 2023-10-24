@@ -11,4 +11,7 @@ public interface ResponsavelRepository extends JpaRepository<Responsavel, Long> 
     List<Responsavel> findAll();
 
     Optional<Responsavel> findById(Long id);
+
+
+    List<Responsavel>findByNomeContaining(String termo);
 }
