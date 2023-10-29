@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/school")
+@CrossOrigin(origins = "*")
 public class ResponsavelController {
 
     @Autowired
